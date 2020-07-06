@@ -1,0 +1,64 @@
+{% extends 'layout.html' %} {% block title %}Tech Projects{% endblock %} {%
+block content %}
+<div class="row-tech">
+  <div class="textimg">
+    <div class="left">
+      <h2>First to 20 Game</h2>
+      <p>
+        This application uses the Arduino board to play the classic first to 20
+        game. Here's how the game works. You as the user will compete with the
+        computer to reach the number 20 first by only adding either 1 or 2 to
+        the score every turn. The first to 20 wins the game.
+      </p>
+    </div>
+    <div class="column">
+      <video width="640" controls class="responsive">
+        <source
+          src="/static/images/tech-projects/Arduino First to 20 Game.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </div>
+  <div class="textimg">
+    <div class="right">
+      <h2>Automated Fish Feeder</h2>
+      <p>
+        This is an automated fish feeder that uses Arduino to proportionally
+        feed the fish in the tank according to user selection of the number of
+        fish (options range from 1 to 5). The fish feeder takes advantage of an
+        auger-style design in order to bring control to how much fish food is
+        dispensed into the tank.
+      </p>
+    </div>
+    <div class="column">
+      <video width="640" controls class="responsive">
+        <source
+          src="/static/images/tech-projects/Automated Fish Feeder.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </div>
+  <div class="textimg">
+    <div class="left">
+      <h2>Obstacle Avoiding Robot</h2>
+      <p>
+        This is a obstacle avoiding robot I built over the summer that is able
+        to move around in an environment by itself. Initially the robot had a
+        fixed ultrasonic sensor orientation (front) but I placed the ultrasonic
+        sensor above a servo motor to introduce two new orientations for the
+        sensor to view and make a more appropriate decision.
+      </p>
+    </div>
+    <div class="column">
+      <img
+        src="/static/images/tech-projects/0.jpg"
+        alt=""
+        width="640"
+        class="responsive"
+      />
+    </div>
+  </div>
+</div>
+{% endblock %}

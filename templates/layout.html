@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link rel="icon" href="/static/images/mithilanpng.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="topnav" id="Topnav">
+      <a class="btn" href="{{ url_for('home') }}">Home</a>
+      <a class="btn" href="{{ url_for('about') }}">About Me</a>
+      <a class="btn" href="{{ url_for('resume') }}">Resume</a>
+      <a class="btn" href="{{ url_for('tech_projects') }}">Tech Projects</a>
+      <a class="btn" href="{{ url_for('graphic_projects') }}">Graphic Projects</a>
+      <a class="btn" href="{{ url_for('contact') }}">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script type=text/javascript src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
