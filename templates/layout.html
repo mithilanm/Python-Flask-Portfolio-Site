@@ -14,12 +14,12 @@
   </head>
   <body>
     <div class="topnav" id="Topnav">
-      <a class="btn" href="{{ url_for('home') }}">Home</a>
-      <a class="btn" href="{{ url_for('about') }}">About Me</a>
-      <a class="btn" href="{{ url_for('resume') }}">Resume</a>
-      <a class="btn" href="{{ url_for('tech_projects') }}">Tech Projects</a>
-      <a class="btn" href="{{ url_for('graphic_projects') }}">Graphic Projects</a>
-      <a class="btn" href="{{ url_for('contact') }}">Contact</a>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About Me</a>
+      <a href="{{ url_for('resume') }}">Resume</a>
+      <a href="{{ url_for('tech_projects') }}">Tech Projects</a>
+      <a href="{{ url_for('graphic_projects') }}">Graphic Projects</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -27,6 +27,16 @@
     <div class="content">
         {% block content %}{% endblock %}
     </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function () {
+        $('a').each(function () {
+          if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active'); $(this).parents('li').addClass('active');
+          }
+        });
+      });
+    </script>
     <script type=text/javascript src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>

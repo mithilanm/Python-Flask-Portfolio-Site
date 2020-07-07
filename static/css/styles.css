@@ -22,7 +22,7 @@ html {
   background-color: #ddd;
   color: rgb(39, 37, 35);
 }
-.topnav a:active {
+.active {
   background-color: #0070c0;
   color: #f2f2f2;
 }
